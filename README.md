@@ -1,4 +1,4 @@
-# noisemix
+# NoiseMix
 
 NoiseMix is a library for [data generation](http://cs231n.stanford.edu/reports/2017/pdfs/300.pdf) for text datasets.
 
