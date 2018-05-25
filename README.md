@@ -16,21 +16,21 @@ After augmentation, we have the original row plus a few new versions:
 
 Thus the generated dataset is at least twice as large as the original.
 
-#### Installing
+### Installing
 
 From PyPI:
 ```
 pip install noisemix
 ```
 
-#### Running
+### Running
 To generate the noisy data, call the program with the path to your data file and the format, for example:
 ```
   python -m noisemix train.ft.txt -format fastText
 ```
 This will generate a data file with the added suffix `.nmx` that includes the original rows and new noisy rows.
 
-##### Parameters
+#### Parameters
 
 NoiseMix offers word-level and sentence-level perturbations.
 
@@ -47,17 +47,13 @@ To be usable for labelled datasets, NoiseMix keeps intact non-language formattin
 
 [fastText](https://fasttext.cc/) (`__label__` prefix) is the only supported format for now.
 
-Suggest a new data format by [opening an issue](../../issues/new?title=Support+for+new+data+format)
-
-English is the only supported language at the moment and the supported keyboard layout is QWERTY
-
-#### Benchmarks
+### Benchmarks
 
 To test the effectiveness of NoiseMix, we compare it control data on several benchmarks.  Several benchmarks and toy datasets are included.
 
 See results and more in [benchmarks](benchmarks/)
 
-#### Developing
+### Developing
 
 To make contributions, just `git clone` this repo or a fork of it, and submit a pull request with your changes.
 
@@ -67,7 +63,13 @@ cd noisemix
 pip install -r requirements.txt
 ```
 
-##### Adding a new language
+#### Adding a new format
+
+Suggest a new data format by [opening an issue](../../issues/new?title=Support+for+new+data+format)
+
+English is the only supported language at the moment and the supported keyboard layout is QWERTY
+
+#### Adding a new language
 
 Beyond parameters that can be adjusted for the specifics of each language, NoiseMix includes hand-built lists of common noise for each language.
 
