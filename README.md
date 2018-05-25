@@ -23,19 +23,12 @@ From PyPI:
 pip install noisemix
 ```
 
-From source:
-```
-git clone https://github.com/noisemix/noisemix.git
-cd noisemix
-pip install -r requirements.txt
-```
-
 #### Running
-To generate the noisy data, call the program with the path to your fastText data file, for example:
+To generate the noisy data, call the program with the path to your data file and the format, for example:
 ```
-  python noisemix.py train.ft.txt
+  python -m noisemix train.ft.txt -format fastText
 ```
-This will generate a data file with the added suffix `.nmx`.
+This will generate a data file with the added suffix `.nmx` that includes the original rows and new noisy rows.
 
 ##### Parameters
 
@@ -67,6 +60,12 @@ See results and more in [benchmarks](benchmarks/)
 #### Developing
 
 To make contributions, just `git clone` this repo or a fork of it, and submit a pull request with your changes.
+
+```
+git clone https://github.com/noisemix/noisemix.git
+cd noisemix
+pip install -r requirements.txt
+```
 
 ##### Adding a new language
 
