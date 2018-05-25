@@ -39,7 +39,9 @@ The word-level perturbations are:
 The sentence-level perturbations are:
 `remove_space` and `flip_words`
 
-Each of the perturbation can be enabled/disabled, repeated multiple times per line and frequency
+Each of the perturbation can be enabled/disabled, repeated multiple times per line and frequency.
+
+Some perturbations are specific to certain languages, groups of languages or alphabets.
 
 #### Supported data formats
 
@@ -63,16 +65,16 @@ cd noisemix
 pip install -r requirements.txt
 ```
 
-#### Adding a new format
-
-Suggest a new data format by [opening an issue](../../issues/new?title=Support+for+new+data+format)
-
-English is the only supported language at the moment and the supported keyboard layout is QWERTY
-
 #### Adding a new language
 
 Beyond parameters that can be adjusted for the specifics of each language, NoiseMix includes hand-built lists of common noise for each language.
 
 For example, in English corpora erroneous swaps of `there` and `their` are common, in Italian it is common for users without an Italian keyboard to type word-final `a' ` instead of `á `.
 
-Add lists for new languages to [noise/data.py](noise/data.py).
+Add support for new languages to [data.py](noisemix/data.py).
+
+#### Adding a new format
+
+Add support for new formats languages to [format.py](noisemix/format.py)
+
+You can also [open an issue](../../issues/new?title=Support+for+new+data+format).
