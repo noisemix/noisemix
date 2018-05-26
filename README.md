@@ -30,7 +30,12 @@ To generate the noisy data, call the program with the path to your data file and
 ```
 This will generate a data file with the added suffix `.nmx` that includes the original rows and new noisy rows.
 
-#### Parameters
+To see all parameters:
+```
+python -m noisemix
+```
+
+#### Config
 
 NoiseMix offers word-level and sentence-level perturbations.
 
